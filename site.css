@@ -291,6 +291,17 @@ main {
   color: var(--accent);
 }
 
+.app-store-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.app-store-badge {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+
 .cards {
   display: grid;
   gap: 1rem;
