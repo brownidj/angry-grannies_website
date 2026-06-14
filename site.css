@@ -294,12 +294,15 @@ main {
 .app-store-link {
   display: inline-flex;
   align-items: center;
+  flex: none;
+  line-height: 0;
 }
 
 .app-store-badge {
   display: block;
-  height: 44px;
-  width: auto;
+  width: 148px;
+  max-width: 100%;
+  height: auto;
 }
 
 .cards {
