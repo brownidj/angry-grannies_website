@@ -413,6 +413,21 @@ html[lang="ja"] .eyebrow {
   margin: 0;
 }
 
+.coming-soon-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.coming-soon-entry {
+  margin-bottom: 0;
+}
+
+.coming-soon-entry + .coming-soon-entry {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
 .app-heading-with-badge {
   align-items: center;
   flex-wrap: nowrap;
@@ -429,6 +444,14 @@ html[lang="ja"] .eyebrow {
 .app-store-badge-disabled {
   width: 112px;
   flex: none;
+}
+
+.coming-soon-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .app-icon {
