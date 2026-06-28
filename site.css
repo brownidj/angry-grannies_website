@@ -184,7 +184,7 @@ main {
 }
 
 .about-page h1 {
-  font-size: clamp(1.55rem, 6.4vw, 2.2rem);
+  font-size: clamp(2rem, 8.2vw, 3rem);
   line-height: 1;
   white-space: nowrap;
 }
@@ -192,7 +192,9 @@ main {
 .heading-link {
   color: inherit;
   font-weight: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
 }
 
 .heading-link:hover {
