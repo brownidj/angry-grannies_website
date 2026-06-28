@@ -414,20 +414,21 @@ html[lang="ja"] .eyebrow {
 }
 
 .app-heading-with-badge {
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.app-title-row {
-  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  min-width: 0;
-  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
 }
 
-.app-title-row h3 {
+.app-heading-with-badge h3 {
+  flex: 1 1 auto;
+  min-width: 0;
   white-space: nowrap;
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+}
+
+.app-store-badge-disabled {
+  width: 112px;
+  flex: none;
 }
 
 .app-icon {
@@ -516,10 +517,6 @@ footer {
   }
 
   .app-heading-with-badge {
-    gap: 0.75rem;
-  }
-
-  .app-store-badge-disabled {
-    width: 132px;
+    gap: 0.5rem;
   }
 }
