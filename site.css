@@ -183,6 +183,16 @@ main {
   letter-spacing: -0.05em;
 }
 
+.heading-link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.heading-link:hover {
+  color: inherit;
+}
+
 .home-page h2 {
   margin: 0 0 1rem;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
