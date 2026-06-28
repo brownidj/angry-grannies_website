@@ -211,6 +211,11 @@ main {
   letter-spacing: -0.06em;
 }
 
+html[lang="ja"] .home-page h1 {
+  font-size: clamp(2.2rem, 5.4vw, 4.2rem);
+  white-space: nowrap;
+}
+
 .support-page h1,
 .privacy-page h1 {
   margin: 0;
