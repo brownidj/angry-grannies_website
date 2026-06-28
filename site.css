@@ -409,6 +409,27 @@ html[lang="ja"] .eyebrow {
   margin-bottom: 0.4rem;
 }
 
+.app-heading h3 {
+  margin: 0;
+}
+
+.app-heading-with-badge {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.app-title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.app-title-row h3 {
+  white-space: nowrap;
+}
+
 .app-icon {
   width: 48px;
   height: 48px;
@@ -492,5 +513,13 @@ footer {
   .home-page .hero-logo,
   .marketing-page .app-art {
     order: -1;
+  }
+
+  .app-heading-with-badge {
+    gap: 0.75rem;
+  }
+
+  .app-store-badge-disabled {
+    width: 132px;
   }
 }
