@@ -587,6 +587,25 @@ ul {
   color: var(--muted);
 }
 
+.form-status,
+.form-error {
+  margin: 0;
+  font-weight: 700;
+}
+
+.form-status:empty,
+.form-error:empty {
+  display: none;
+}
+
+.form-success {
+  color: #375f14;
+}
+
+.form-error:not(:empty) {
+  color: var(--accent-dark);
+}
+
 .tester-registration fieldset {
   margin: 0;
   padding: 1rem;

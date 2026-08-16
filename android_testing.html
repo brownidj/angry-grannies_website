@@ -157,7 +157,11 @@
           aria-labelledby="registration-heading"
         >
           <h2 id="registration-heading">Register as a Tester</h2>
-          <form id="tester-registration-form">
+          <form
+            id="tester-registration-form"
+            action="https://formspree.io/f/mrpzalny"
+            method="POST"
+          >
             <div class="form-field">
               <label for="tester-name">Your name</label
               ><input
@@ -166,6 +170,7 @@
                 type="text"
                 autocomplete="name"
                 required
+                data-fs-field
               />
             </div>
             <div class="form-field">
@@ -184,7 +189,9 @@
                 autocomplete="email"
                 required
                 aria-describedby="email-help"
+                data-fs-field
               />
+              <span class="form-error" data-fs-error="email"></span>
               <p id="email-help" class="field-help">
                 Please enter the Google account email address used by the Google
                 Play Store on your Android device, rather than another email
@@ -200,6 +207,7 @@
                 type="text"
                 autocomplete="off"
                 placeholder="For example: Samsung Galaxy S24, Google Pixel 9, etc."
+                data-fs-field
               />
             </div>
             <fieldset>
@@ -209,7 +217,9 @@
                   id="tester-agreement"
                   name="agreement"
                   type="checkbox"
+                  value="Agreed"
                   required
+                  data-fs-field
                 />
                 <span
                   >By registering, I agree to join the SuDoKu Fresh Google Play
@@ -219,9 +229,15 @@
                 ></label
               >
             </fieldset>
-            <button class="button" type="submit">
+            <button class="button" type="submit" data-fs-submit-btn>
               Register for the Closed Test
             </button>
+            <p
+              class="form-status form-success"
+              data-fs-success
+              role="status"
+            ></p>
+            <p class="form-status form-error" data-fs-error role="alert"></p>
           </form>
         </section>
 
@@ -285,26 +301,16 @@
       </p>
     </footer>
     <script>
-      document
-        .getElementById('tester-registration-form')
-        .addEventListener('submit', (event) => {
-          event.preventDefault();
-
-          const formData = new FormData(event.currentTarget);
-          const message = [
-            'SuDoKu Fresh closed test registration',
-            '',
-            `Name: ${formData.get('name')}`,
-            `Google Play account email address: ${formData.get('email')}`,
-            `Android phone or tablet: ${formData.get('device') || 'Not provided'}`,
-            '',
-            'Agreement: The tester agrees to the closed-test terms.',
-          ].join('\n');
-
-          window.location.href = `mailto:support@angrannies.com.au?subject=${encodeURIComponent(
-            'SuDoKu Fresh closed test registration',
-          )}&body=${encodeURIComponent(message)}`;
-        });
+      window.formspree =
+        window.formspree ||
+        function () {
+          (formspree.q = formspree.q || []).push(arguments);
+        };
+      formspree('initForm', {
+        formElement: '#tester-registration-form',
+        formId: 'mrpzalny',
+      });
     </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   </body>
 </html>
