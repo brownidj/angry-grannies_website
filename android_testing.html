@@ -157,11 +157,7 @@
           aria-labelledby="registration-heading"
         >
           <h2 id="registration-heading">Register as a Tester</h2>
-          <form
-            action="mailto:support@angrannies.com.au?subject=SuDoKu%20Fresh%20closed%20test%20registration"
-            method="post"
-            enctype="text/plain"
-          >
+          <form id="tester-registration-form">
             <div class="form-field">
               <label for="tester-name">Your name</label
               ><input
@@ -288,5 +284,27 @@
         projects.
       </p>
     </footer>
+    <script>
+      document
+        .getElementById('tester-registration-form')
+        .addEventListener('submit', (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(event.currentTarget);
+          const message = [
+            'SuDoKu Fresh closed test registration',
+            '',
+            `Name: ${formData.get('name')}`,
+            `Google Play account email address: ${formData.get('email')}`,
+            `Android phone or tablet: ${formData.get('device') || 'Not provided'}`,
+            '',
+            'Agreement: The tester agrees to the closed-test terms.',
+          ].join('\n');
+
+          window.location.href = `mailto:support@angrannies.com.au?subject=${encodeURIComponent(
+            'SuDoKu Fresh closed test registration',
+          )}&body=${encodeURIComponent(message)}`;
+        });
+    </script>
   </body>
 </html>
