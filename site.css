@@ -551,6 +551,12 @@ ul {
   font-weight: 400;
 }
 
+.form-help-link {
+  margin-left: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
 .form-field input {
   width: 100%;
   min-height: 44px;
