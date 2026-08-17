@@ -433,6 +433,16 @@ html[lang="ja"] .eyebrow {
   border-top: 1px solid var(--line);
 }
 
+.coming-soon-section {
+  margin-top: 1.25rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+}
+
+.coming-soon-section .status {
+  margin-bottom: 1.25rem;
+}
+
 .app-heading-with-badge {
   align-items: center;
   flex-wrap: nowrap;
