@@ -551,28 +551,6 @@ ul {
   font-weight: 400;
 }
 
-.form-help-link {
-  display: inline-flex;
-  width: 1.4rem;
-  height: 1.4rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-.form-help-link:hover,
-.form-help-link:focus-visible {
-  color: #ffffff;
-  background: var(--accent-dark);
-}
-
 .form-field input {
   width: 100%;
   min-height: 44px;
